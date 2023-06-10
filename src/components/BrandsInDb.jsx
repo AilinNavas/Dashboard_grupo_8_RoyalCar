@@ -1,16 +1,16 @@
 import React from 'react'
 
-class GenresInDb extends React.Component {
+class BrandsInDb extends React.Component {
     state = {
-        genres: [],
+        productByBrands: [],
         overTitle: false
     }
 
     componentDidMount() {
-        fetch('http://localhost:3001/api/genres')
+        fetch('http://localhost:3000/api/products')
             .then(res => res.json())
             .then(data => {
-                this.setState({ genres: data.data })
+                 this.setState({ productByBrands: data.data.countByBrand})
             })
             .catch(err => {
                 console.log(err)
@@ -26,15 +26,15 @@ class GenresInDb extends React.Component {
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={this.onTitleOver}>Genres in Data Base</h5>
+                        <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={this.onTitleOver}>Productos por marcas</h5>
                     </div>
                     <div className={`card-body ${this.state.overTitle ? 'bg-secondary' : ''}`}>
                         <div className="row">
-                            {this.state.genres.map((genre, index) =>
+                            {this.state.productByBrands.map((product, index) =>
                                 <div className="col-lg-6 mb-4" key={index}>
                                     <div className="card bg-dark text-white shadow">
                                         <div className="card-body">
-                                            {genre.name}
+                                            {product}
                                         </div>
                                     </div>
                                 </div>
@@ -47,4 +47,4 @@ class GenresInDb extends React.Component {
     }
 }
 
-export default GenresInDb
+export default BrandsInDb

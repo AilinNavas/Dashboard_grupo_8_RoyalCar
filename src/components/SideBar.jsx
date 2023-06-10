@@ -32,23 +32,23 @@ function SideBar() {
 
 			{/* <!-- Nav Item - Pages --> */}
 			<li className="nav-item">
-				<Link className="nav-link collapsed" to="/genres">
+				<Link className="nav-link collapsed" to="/brands">
 				<i className="fa-duotone fa-users"></i>
-					<span>Usuarios</span>
+					<span>Productos por marcas</span>
 				</Link>
 			</li>
 
 			{/* <!-- Nav Item - Charts --> */}
 			<li className="nav-item">
-				<Link className="nav-link" to="/movies">
+				<Link className="nav-link" to="/products">
 				<i className="fa-duotone fa-car-side"></i>
-					<span>Productos</span>
+					<span>Todos los productos</span>
 				</Link>
 			</li>
 
 			{/* <!-- Nav Item - Tables --> */}
 			<li className="nav-item">
-				<Link className="nav-link" to="/last-movie">
+				<Link className="nav-link" to="/last-product">
 					<i className="fas fa-fw fa-table"></i>
 					<span>Último Producto</span>
 				</Link>

@@ -2,9 +2,9 @@ import { Routes, Route } from 'react-router-dom'
 
 import Sidebar from './components/Sidebar'
 import ContentWrapper from './components/ContentWrapper'
-import GenresInDb from './components/GenresInDb'
-import ContentRowMovies from './components/ContentRowMovies'
-import LastMovieInDb from './components/LastMovieInDb'
+import BrandsInDb from './components/BrandsInDb'
+import ContentRowProducts from './components/ContentRowProducts'
+import LastProductInDb from './components/LastProductInDb'
 import SearchMovies from './components/SearchMovies'
 
 import './App.css'
@@ -20,9 +20,9 @@ function App() {
 			{/* <!-- Content Wrapper --> */}
 			<Routes>
 				<Route path="/" element={<ContentWrapper />} />
-				<Route path="/genres" element={<GenresInDb />} />
-				<Route path="/movies" element={<ContentRowMovies />} />
-				<Route path="/last-movie" element={<LastMovieInDb />} />
+				<Route path="/brands" element={<BrandsInDb />} />
+				<Route path="/products" element={<ContentRowProducts />} />
+				<Route path="/last-product" element={<LastProductInDb />} />
 				<Route path="/search" element={<SearchMovies prueba="esta es una propiedad de prueba" />} />
 				<Route path="*" element={<h1>Not Found</h1>} />
 			</Routes>
