@@ -1,30 +1,9 @@
 import React, { useState, useEffect } from "react";
 import SmallCard from './SmallCard'
 
-// const cards = [
-//     {
-//         title: 'Productos en base de datos',
-//         color: 'primary',
-//         quantity: 21,
-//         icon: 'fa-duotone fa-car'
-//     },
-//     {
-//         title: 'Nuestras marcas',
-//         color: 'success',
-//         quantity: 79,
-//         icon: 'fa-crown'
-//     },
-//     {
-//         title: 'Cantidad de usuarios registrados',
-//         color: 'warning',
-//         quantity: 49,
-//         icon: 'fa-duotone fa-users'
-//     }
-// ]
-
 function ContentRowProducts() {
     
-    const [productTotal, setProductTotal] = useState(0);
+  const [productTotal, setProductTotal] = useState(0);
   const [brandsTotal, setBrandsTotal] = useState(0);
   const [usersTotal, setUsersTotal] = useState(0);
     
@@ -35,9 +14,9 @@ function ContentRowProducts() {
       })
       .then((data) => {
        
-        setProductTotal(data.countProducts);
-        setBrandsTotal(data.brandsCount);
-        console.log(data.countProducts)
+        setProductTotal(data.data.countProducts);
+        setBrandsTotal(data.data.brandsCount);
+    
       })
       .catch((error) => console.log(error));
   }, []);
@@ -48,8 +27,8 @@ function ContentRowProducts() {
         return respuesta.json();
       })
       .then((data) => {
-        setUsersTotal(data.count);
-        console.log(data.count)
+        setUsersTotal(data.data.count);
+        
       })
       .catch((error) => console.log(error));
   }, []);
