@@ -5,9 +5,9 @@ import ContentWrapper from './components/ContentWrapper'
 import BrandsInDb from './components/BrandsInDb'
 import ContentRowProducts from './components/ContentRowProducts'
 import LastProductInDb from './components/LastProductInDb'
-import SearchMovies from './components/SearchMovies'
 
 import './App.css'
+import Product from './components/Product'
 
 function App() {
 	return (
@@ -21,9 +21,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<ContentWrapper />} />
 				<Route path="/brands" element={<BrandsInDb />} />
-				<Route path="/products" element={<ContentRowProducts />} />
+				<Route path="/products" element={<Product/>} />
 				<Route path="/last-product" element={<LastProductInDb />} />
-				<Route path="/search" element={<SearchMovies prueba="esta es una propiedad de prueba" />} />
 				<Route path="*" element={<h1>Not Found</h1>} />
 			</Routes>
 			{/* <!-- End of Content Wrapper --> */}

@@ -3,7 +3,7 @@ import SmallCard from './SmallCard'
 
 function ContentRowProducts() {
     
-  const [productTotal, setProductTotal] = useState(0);
+  const [productsTotal, setProductTotal] = useState(0);
   const [brandsTotal, setBrandsTotal] = useState(0);
   const [usersTotal, setUsersTotal] = useState(0);
     
@@ -36,14 +36,12 @@ function ContentRowProducts() {
    
     return (
         <div className="row">
-            {/* {cards.map((card, key) =>
-                <SmallCard key={key} color={card.color} title={card.title} quantity={card.quantity} icon={card.icon} />
-            )} */}
+      
              <SmallCard
           color="primary"
-          title="Total Productos"
+          title="Total de productos"
           icon="fa-car"
-          quantity={productTotal}
+          quantity={productsTotal}
         />
         <SmallCard
           color="warning"

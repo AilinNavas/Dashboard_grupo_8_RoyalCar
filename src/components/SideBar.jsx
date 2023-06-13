@@ -33,7 +33,7 @@ function SideBar() {
 			{/* <!-- Nav Item - Pages --> */}
 			<li className="nav-item">
 				<Link className="nav-link collapsed" to="/brands">
-				<i className="fa-duotone fa-users"></i>
+				<i className="fas fa-sitemap"></i>
 					<span>Productos por marcas</span>
 				</Link>
 			</li>
@@ -41,7 +41,7 @@ function SideBar() {
 			{/* <!-- Nav Item - Charts --> */}
 			<li className="nav-item">
 				<Link className="nav-link" to="/products">
-				<i className="fa-duotone fa-car-side"></i>
+				<i className="fas fa-list"></i>
 					<span>Todos los productos</span>
 				</Link>
 			</li>
@@ -54,12 +54,12 @@ function SideBar() {
 				</Link>
 			</li>
 
-			<li className="nav-item">
+			{/* <li className="nav-item">
 				<Link className="nav-link" to="/search">
 					<i className="fas fa-search"></i>
 					<span>Buscar</span>
 				</Link>
-			</li>
+			</li> */}
 
 			{/* <!-- Divider --> */}
 			<hr className="sidebar-divider d-none d-md-block" />
