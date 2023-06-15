@@ -7,7 +7,7 @@ function SideBar() {
 		<ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 			{/* <!-- Sidebar - Brand --> */}
-			<Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
+			<Link className="sidebar-brand d-flex align-items-center justify-content-center" to="http://localhost:3000/">
 				<div className="sidebar-brand-icon">
 					<img className="w-100" src="/assets/images/logo-royal-car.jpeg" alt="Royal Car" />
 				</div>
@@ -17,9 +17,9 @@ function SideBar() {
 			<hr className="sidebar-divider my-0" />
 
 			{/* <!-- Nav Item - Dashboard --> */}
-			<li className="nav-item active">
+			<li className="nav-item">
 				<Link className="nav-link" to="/">
-					<i className="fas fa-fw fa-tachometer-alt"></i>
+				<i class="fas fa-tachometer-alt-fast"></i>
 					<span>Dashboard - Royal Car</span>
 				</Link>
 			</li>
@@ -29,6 +29,15 @@ function SideBar() {
 
 			{/* <!-- Heading --> */}
 			<div className="sidebar-heading">Acciones</div>
+
+			{/* <!-- Nav Item - Dashboard --> */}
+			<li className="nav-item">
+				<Link className="nav-link" to="/">
+				<i class="far fa-tachometer-alt-fastest"></i>
+					<span>Dashboard - Royal Car</span>
+				</Link>
+			</li>
+
 
 			{/* <!-- Nav Item - Pages --> */}
 			<li className="nav-item">
